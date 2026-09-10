@@ -1,0 +1,46 @@
+import React from 'react';
+import Link from 'next/link';
+
+export default function LegalHubPage() {
+  return (
+    <div className="min-h-screen bg-white dark:bg-darkbg-primary p-8 md:p-24">
+      <div className="max-w-3xl mx-auto text-center">
+        <h1 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">Legal Center</h1>
+        <p className="text-slate-500 dark:text-slate-400 mb-12">
+          Transparency and trust are important to us. Please review our guidelines below.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Link
+            href="/terms"
+            className="p-8 bg-white dark:bg-darkbg-secondary rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all group"
+          >
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-brand transition-colors">Terms of Service</h2>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              Rules, liability, and usage guidelines for the platform.
+            </p>
+          </Link>
+
+          <Link
+            href="/privacy"
+            className="p-8 bg-white dark:bg-darkbg-secondary rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all group"
+          >
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-brand transition-colors">Privacy Policy</h2>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              How we handle your data and our 48-hour guest policy.
+            </p>
+          </Link>
+        </div>
+
+        <div className="mt-12">
+          <Link
+            href="/"
+            className="text-sm font-medium text-slate-400 hover:text-brand transition-colors"
+          >
+            ← Back to Home
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}

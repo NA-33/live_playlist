@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Brand Palette */
+  --color-brand: #00A693;
+  --color-brand-light: #00C4B2;
+  --color-brand-dark: #008C7D;
+  --color-brand-darkest: #005A51;
+  --color-brand-muted: rgba(0, 166, 147, 0.12);
+
+  /* Default "dark" vars to prevent crashes in light mode */
+  --color-darkbg-primary: transparent;
+  --color-darkbg-secondary: transparent;
+  --color-darkbg-accent: transparent;
+}
+
+.dark {
+  --background: #0F172A;
+  --foreground: #f8fafc;
+
+  /* Adjusted Brand Palette for Dark Mode */
+  --color-brand: #00C4B2;
+  --color-brand-light: #4de2d2;
+  --color-brand-dark: #00A693;
+  --color-brand-darkest: #008C7D;
+  --color-brand-muted: rgba(0, 196, 178, 0.12);
+
+  /* High-end Dark Mode Palette */
+  --color-darkbg-primary: #0F172A;
+  --color-darkbg-secondary: #1E293B;
+  --color-darkbg-accent: #334155;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--color-brand);
+  --color-brand-light: var(--color-brand-light);
+  --color-brand-dark: var(--color-brand-dark);
+  --color-brand-darkest: var(--color-brand-darkest);
+  --color-brand-muted: var(--color-brand-muted);
+  --color-darkbg-primary: var(--color-darkbg-primary);
+  --color-darkbg-secondary: var(--color-darkbg-secondary);
+  --color-darkbg-accent: var(--color-darkbg-accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
